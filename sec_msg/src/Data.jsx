@@ -29,7 +29,7 @@ const Data = () => {
         return;
       }
 
-      const response = await axios.get('http://localhost:5000/api/secret/messages', {
+      const response = await axios.get('https://secret-deply.onrender.com/api/secret/messages', {
         headers: {
           Authorization: `${token}`,
         },
@@ -54,7 +54,7 @@ const Data = () => {
       }
 
       await axios.post(
-        'http://localhost:5000/api/secret/post',
+        'https://secret-deply.onrender.com/api/secret/post',
         { secretMessage: newMessage },
         {
           headers: {
