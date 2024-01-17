@@ -32,7 +32,7 @@ export default function Signin() {
       
       setCredentials({email:mail,password:pwd});
       
-      await axios.post('http://localhost:5000/api/auth/login', credentials)
+      await axios.post('https://secret-deply.onrender.com/api/auth/login', credentials)
       .then(res=>{console.log(res);localStorage.setItem('token',res.data.token);setAuth(true)});
       
       if(auth){
