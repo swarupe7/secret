@@ -17,7 +17,7 @@ const Signup= () => {
         console.log('signup called');
         setCredentials({email:mail,password:pwd});
          
-      await axios.post('http://localhost:5000/api/auth/register', credentials)
+      await axios.post('https://secret-deply.onrender.com/api/auth/register', credentials)
       .then(res=>{navigate('/login')}).catch(err=>{console.log(err)});
       
 
